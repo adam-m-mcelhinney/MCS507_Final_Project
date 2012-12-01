@@ -1,0 +1,9 @@
+\@doanenote {1}
+macro:->test
+note
+1
+\@endanenote 
+\@doanenote {2}
+macro:->testnote
+2
+\@endanenote 

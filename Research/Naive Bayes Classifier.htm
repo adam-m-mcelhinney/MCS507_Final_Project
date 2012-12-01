@@ -1,0 +1,708 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head id="Head"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><script src="Naive%20Bayes%20Classifier_files/gtm.js" async=""></script><script src="Naive%20Bayes%20Classifier_files/bmi.js" language="javascript"></script><meta content="text/javascript" http-equiv="Content-Script-Type"><meta content="text/css" http-equiv="Content-Style-Type"><meta id="MetaDescription" name="DESCRIPTION" content="The Naive Bayes Classifier technique is based on the so-called Bayesian theorem and is particularly suited when the dimensionality of the inputs is high. Despite its simplicity, Naive Bayes can often outperform more sophisticated classification methods. "><meta id="MetaKeywords" name="KEYWORDS" content="data mining, predictive analytics, Naive Bayes Classifier "><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright (c) 2012 by www.statsoft.com"><meta id="MetaAuthor" name="AUTHOR" content="www.statsoft.com"><meta name="RESOURCE-TYPE" content="DOCUMENT"><meta name="DISTRIBUTION" content="GLOBAL"><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW"><meta name="REVISIT-AFTER" content="1 DAYS"><meta name="RATING" content="GENERAL"><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)"><style id="StylePlaceholder" type="text/css"></style><link id="APortals__default_" rel="stylesheet" type="text/css" href="Naive%20Bayes%20Classifier_files/default.css"><link id="APortals__default_Skins_StatSoftTemplates_" rel="stylesheet" type="text/css" href="Naive%20Bayes%20Classifier_files/skin.css"><link id="APortals__default_Containers_StatSoft_" rel="stylesheet" type="text/css" href="Naive%20Bayes%20Classifier_files/container.css"><link id="APortals__default_Containers_StatSoft_Title_StatSoft_css" rel="stylesheet" type="text/css" href="Naive%20Bayes%20Classifier_files/Title_StatSoft.css"><link id="APortals_0_" rel="stylesheet" type="text/css" href="Naive%20Bayes%20Classifier_files/portal.css"><!--[if LT IE 7]><link id="IE6Minus" rel="stylesheet" type="text/css" href="/Portals/_default/Skins/StatSoftTemplates/css/ie6skin.css" /><![endif]--><script type="text/javascript" src="Naive%20Bayes%20Classifier_files/jquery.js"></script><title>
+	Naive Bayes Classifier 
+</title><script type="text/javascript" src="Naive%20Bayes%20Classifier_files/tsr.js"></script><script>try {  for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){    var lastpass_f = document.forms[lastpass_iter];    if(typeof(lastpass_f.lpsubmitorig)=="undefined"){      if (typeof(lastpass_f.submit) == "function") {        lastpass_f.lpsubmitorig = lastpass_f.submit;        lastpass_f.submit = function(){          var form = this;          try {            if (document.documentElement && 'createEvent' in document)            {              var forms = document.getElementsByTagName('form');              for (var i=0 ; i<forms.length ; ++i)                if (forms[i]==form)                {                  var element = document.createElement('lpformsubmitdataelement');                  element.setAttribute('formnum',i);                  element.setAttribute('from','submithook');                  document.documentElement.appendChild(element);                  var evt = document.createEvent('Events');                  evt.initEvent('lpformsubmit',true,false);                  element.dispatchEvent(evt);                  break;                }            }          } catch (e) {}          try {            form.lpsubmitorig();          } catch (e) {}        }      }    }  }} catch (e) {}</script></head>
+<body id="Body">
+    <form name="Form" method="post" action="/textbook/naive-bayes-classifier/" id="Form" enctype="multipart/form-data">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NDIyOTEzMjkPZBYGZg8WAh4EVGV4dAV5PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgVHJhbnNpdGlvbmFsLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXRyYW5zaXRpb25hbC5kdGQiPmQCAQ9kFg4CBA8WAh4HVmlzaWJsZWhkAgUPFgIeB2NvbnRlbnQF/gFUaGUgTmFpdmUgQmF5ZXMgQ2xhc3NpZmllciB0ZWNobmlxdWUgaXMgYmFzZWQgb24gdGhlIHNvLWNhbGxlZCBCYXllc2lhbiB0aGVvcmVtIGFuZCBpcyBwYXJ0aWN1bGFybHkgc3VpdGVkIHdoZW4gdGhlIGRpbWVuc2lvbmFsaXR5IG9mIHRoZSBpbnB1dHMgaXMgaGlnaC4gRGVzcGl0ZSBpdHMgc2ltcGxpY2l0eSwgTmFpdmUgQmF5ZXMgY2FuIG9mdGVuIG91dHBlcmZvcm0gbW9yZSBzb3BoaXN0aWNhdGVkIGNsYXNzaWZpY2F0aW9uIG1ldGhvZHMuIGQCBg8WAh8CBTpkYXRhIG1pbmluZywgcHJlZGljdGl2ZSBhbmFseXRpY3MsIE5haXZlIEJheWVzIENsYXNzaWZpZXIgZAIHDxYCHwIFJkNvcHlyaWdodCAoYykgMjAxMiBieSB3d3cuc3RhdHNvZnQuY29tZAIIDxYEHwJkHwFoZAIJDxYCHwIFEHd3dy5zdGF0c29mdC5jb21kAgwPFgIfAgUNSU5ERVgsIEZPTExPV2QCAg9kFgICAQ9kFgQCBA9kFgJmD2QWEGYPZBYCZg9kFgJmDxYCHwFoFgJmD2QWAmYPZBYGAgMPEGRkFgBkAg8PZBYCZg8PFgYeCEltYWdlVXJsBRIvaW1hZ2VzL2V4cGFuZC5naWYeDUFsdGVybmF0ZVRleHQFCE1heGltaXplHgdUb29sVGlwBQhNYXhpbWl6ZRYKHgd1c2VyY3RyBQlVc2FiaWxpdHkeB3VzZXJrZXkFFENvbnRyb2xQYW5lbFZpc2libGUwHgdvbmNsaWNrBVFpZiAoX19kbm5fU2VjdGlvbk1heE1pbih0aGlzLCAgJ2Rubl9JY29uQmFyLmFzY3hfcm93Q29udHJvbFBhbmVsJykpIHJldHVybiBmYWxzZTseCG1heF9pY29uBRIvaW1hZ2VzL2V4cGFuZC5naWYeCG1pbl9pY29uBRQvaW1hZ2VzL2NvbGxhcHNlLmdpZmQCEQ8WAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTsWAgIBD2QWAgIBD2QWEAIBDxBkZBYAZAIFDxBkZBYAZAIHDxBkZBYAZAILDxBkZBYAZAIPDxBkZBYAZAIVDxBkZBYAZAIZDxBkZBYBZmQCHQ8QZGQWAGQCAQ9kFghmDxYCHwAFHjxkaXYgY2xhc3M9Imxhbmd1YWdlLW9iamVjdCIgPmQCAg8QDxYCHwFoZGQWAGQCBA8WAh8BaGQCBg8WAh8ABQY8L2Rpdj5kAgQPZBYCZg8PFgYeCENzc0NsYXNzBQR1c2VyHwAFCFJlZ2lzdGVyHgRfIVNCAgJkZAIFD2QWAmYPDxYGHwwFBHVzZXIfAAUFTG9naW4fDQICZGQCBw9kFgRmDxYCHgVjbGFzcwUrRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtMTUzMhYCAgEPZBYOAgEPDxYCHwFoZGQCAw8PFgIfAWhkZAIFD2QWAmYPDxYCHwUFCE1pbmltaXplFgIfCAVTaWYgKF9fZG5uX0NvbnRhaW5lck1heE1pbl9PbkNsaWNrKHRoaXMsICdkbm5fY3RyMTUzMl9Nb2R1bGVDb250ZW50JykpIHJldHVybiBmYWxzZTsWAmYPDxYGHwMFOi9Qb3J0YWxzL19kZWZhdWx0L0NvbnRhaW5lcnMvU3RhdFNvZnQvaW1hZ2VzL0ROTi1taW51cy5naWYfBAUITWluaW1pemUfBQUITWluaW1pemVkZAIJDxYCHw4FIU5vcm1hbCBjX2NvbnRlbnRwYW5lIEROTkFsaWdubGVmdBYCAgIPD2QWAh8OBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDFgICAQ9kFgICAg8WAh8BaGQCCw9kFgJmDw8WAh8BaGRkAg0PZBYCZg8PFgIfAWhkZAIPD2QWAmYPDxYCHwFoZGQCAQ8WAh8OBStEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS0yNDcwFgICAQ9kFhACAQ8PFgIfAWhkZAIDDw8WAh8BaGRkAgUPZBYCZg8PFgIfBQUITWluaW1pemUWAh8IBVNpZiAoX19kbm5fQ29udGFpbmVyTWF4TWluX09uQ2xpY2sodGhpcywgJ2Rubl9jdHIyNDcwX01vZHVsZUNvbnRlbnQnKSkgcmV0dXJuIGZhbHNlOxYCZg8PFgYfAwU6L1BvcnRhbHMvX2RlZmF1bHQvQ29udGFpbmVycy9TdGF0U29mdC9pbWFnZXMvRE5OLW1pbnVzLmdpZh8EBQhNaW5pbWl6ZR8FBQhNaW5pbWl6ZWRkAgcPZBYCZg8PFgIfAWhkZAIJD2QWAgICDw9kFgIfDgUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQ2QCCw9kFgJmDw8WAh8BaGRkAg0PZBYCZg8PFgIfAWhkZAIPD2QWAmYPDxYCHwFoZGQCCA8PFgIfAGRkZAIKDw8WAh8ABRdOYWl2ZSBCYXllcyBDbGFzc2lmaWVyIGRkAgsPDxYCHwAFCjU6MDc6MTggUE1kZAIKDxQrAAIUKwADZGRkZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFEGRubiRTZWFyY2hCdXR0b24FLmRubiRjdHIxNTMyJGRubkFDVElPTkJVVFRPTjMkY3RsMDAkY3RsMDAkY3RsMDCGZCFe5HPgCyWXPjIZmiwHWPR3FA==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="Naive%20Bayes%20Classifier_files/WebResource.js" type="text/javascript"></script>
+
+
+<script src="Naive%20Bayes%20Classifier_files/dnncore.js" type="text/javascript"></script>
+<script src="Naive%20Bayes%20Classifier_files/ScriptResource.js" type="text/javascript"></script>
+<script src="Naive%20Bayes%20Classifier_files/ScriptResource_002.js" type="text/javascript"></script>
+<script src="Naive%20Bayes%20Classifier_files/dnn_003.js" type="text/javascript"></script>
+<script src="Naive%20Bayes%20Classifier_files/dnn.js" type="text/javascript"></script>
+<script src="Naive%20Bayes%20Classifier_files/dnn_002.js" type="text/javascript"></script>
+<div>
+
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCgK8lJXBAwLqpYC2CQKkks2HAwLnl7GfCQLPorf0BgLi9ZXyBAK56YiaDQKEt9bPBQL+5PGyAgLR9YnYDv+jn2KPcWz6+4gUGK74C/8qXxpw" type="hidden">
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', document.getElementById('Form'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+        
+        
+
+
+<script src="Naive%20Bayes%20Classifier_files/jsapi" type="text/javascript"></script>
+
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+    
+    
+//-->
+</script>
+
+
+
+
+<script language="Javascript" type="text/javascript">
+   
+
+   google.load('search', '1.0'); 
+
+   function OnLoad() 
+   { 
+      var searchControl = new google.search.SearchControl();
+      var drawOptions = new google.search.DrawOptions();
+      drawOptions.setInput(document.getElementById("gss_input"));
+      var options = new google.search.SearcherOptions(); 
+      options.setExpandMode(google.search.SearchControl.EXPAND_MODE_OPEN);
+      options.setRoot(document.getElementById("gcsResults"));
+      // options.setNoResultsString("No results found.");  <-- This option is broken as of 11/10/2008 
+      searchControl.setLinkTarget(google.search.Search.LINK_TARGET_BLANK);
+      searchControl.setResultSetSize(google.search.Search.LARGE_RESULTSET); 
+      var siteSearch = new google.search.WebSearch();
+      siteSearch.setSiteRestriction('000365147034520072290:xwkjy77oy8e', '');
+      // siteSearch.setQueryAddition("-statsoft.com/textbook");
+
+      searchControl.addSearcher(siteSearch, options);
+      searchControl.draw(null, drawOptions);
+      
+   }
+
+   google.setOnLoadCallback(OnLoad, true);
+
+   function blockError() { return true; }
+   window.onerror = blockError;
+
+
+
+   </script><script src="Naive%20Bayes%20Classifier_files/a" type="text/javascript"></script><link href="Naive%20Bayes%20Classifier_files/defaulten.css" type="text/css" rel="stylesheet"><script src="Naive%20Bayes%20Classifier_files/defaulten.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="all" type="text/css" href="Naive%20Bayes%20Classifier_files/est1.css">
+
+
+	<style type="text/css">
+
+DIV.SearchIcon
+               {
+            position: absolute;
+            right: -35px;
+            top: 0px;
+            z-index: 50;
+        }
+	
+                
+        DIV.SearchBorderx
+        {
+            position: absolute;
+            right: 55px;
+            top: 0px;
+            height: 20px;
+             z-index:5000;
+        }
+        DIV.search-02
+        {
+            position: absolute;
+            right: 22px;
+            top: 2px;
+            width: 25px;
+            height: 22px;
+             z-index: 50;
+        }
+        DIV.search-03
+        {
+            position: absolute;
+            right: 26px;
+            top: -1px;
+            width: 16px;
+            height: 22px;
+        }
+        
+        .RequiredCSS
+        {
+           color:#848484;
+        }
+        
+        
+
+	
+
+
+        
+        .breadcrumb
+        {
+            
+          
+    font: 12px Arial, Helvetica, sans-serif;
+    background-image:url('/images/bc_bg.png'); 
+    background-repeat:repeat-x;
+    color:#777;
+    border-bottom:solid 1px #cacaca;
+    border-top:solid 1px #cacaca;
+    width:100%;
+    overflow:hidden;
+    margin:0px;
+    padding:  3px 3px 3px 3px;
+    
+    font-weight:normal;
+     
+     vertical-align: middle;
+
+
+              
+              
+        }
+        
+        .sep
+        {
+
+    background-image:url('/images/bc_bg.png'); 
+    background-repeat:repeat-x;
+    
+    color:#9b9b9b;
+    border-bottom:solid 1px #cacaca;
+    border-top:solid 1px #cacaca;
+
+    overflow:hidden;
+     vertical-align: middle;
+     
+     
+   
+    
+    
+    
+        }
+        
+        .sepx
+        {
+
+    background-image:url('/images/bc_bg.png'); 
+    background-repeat:repeat-x;
+    
+    color:#9b9b9b;
+    border-bottom:solid 1px #cacaca;
+    border-top:solid 1px #cacaca;
+
+    overflow:hidden;
+     vertical-align: middle;
+   
+    
+    
+    
+        }
+        
+        #sep
+        {
+
+     border-left:solid 1px #cacaca;
+     
+     
+  
+    
+        }
+
+        
+        #sep a:link,
+#sep a:visited {
+font: 12px Arial, Helvetica, sans-serif;
+	color:#0043FF;
+	text-decoration:none;
+	 font-weight:normal;
+	}
+	
+	#sep a:hover {
+font: 12px Arial, Helvetica, sans-serif;
+	color:#0043FF;
+	text-decoration: underline;
+	 font-weight:normal;
+	}
+	
+	        #estx a:link,
+#estx a:visited {
+font: 13px Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	text-decoration:none;
+	 font-weight:bold;
+	}
+	
+	#estx a:hover {
+font: 13px Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	text-decoration: none;
+	 font-weight:bold;
+	  
+	}
+ 
+        
+</style>
+
+<!--[if IE 6]>
+<style type="text/css">
+/*
+ * If we are using IE 7 we must override our position attribute for our #bg div
+ */
+
+	
+	.estcontent
+	{
+	  width:75%;
+	  height:600px;
+	}
+</style>
+<![endif]-->
+	
+
+
+
+                 <div id="dnn_ControlPanel">
+</div>
+                    <div class="language-object">
+
+
+</div>
+  <div class="scroll2">
+
+
+
+<script src="Naive%20Bayes%20Classifier_files/loadFlash.js" language="Javascript" type="text/javascript"></script>
+
+<div class="est2">
+	
+<!--	                    <script type="text/javascript">
+	                        loadFlash('/textbook/flash/statsoft2.swf', '185', '148', 'ffffff', '8',
+'transparent', '/textbook/flash/sc1.png', '0', 'mycontent');
+                    </script>-->
+	
+<a href="http://www.statsoft.com/solutions/sas-alternative"><img src="Naive%20Bayes%20Classifier_files/statsoft-sas-185x198.jpg" height="198" width="185"></a>
+<!-- <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="185" height="148" id="statsoft2" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="/textbook/flash/statsoft2.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />	<embed src="/textbook/flash/statsoft2.swf" quality="high" bgcolor="#ffffff" width="185" height="148" name="statsoft2" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object> -->
+	
+<div class="estcontent2">
+<div class="buttonsA"><ul>
+	<li>
+		<ul class="leftbuttonA" id="leftbuttonA">
+			
+			<li><a href="http://www.statsoft.com/textbook/elementary-concepts-in-statistics/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b1.png" alt="" align="top"> Elementary Concepts</a></li>
+					</ul>
+
+	</li>
+</ul></div>
+<div class="buttonsB"><ul>
+	<li>
+		<ul class="leftbuttonB" id="leftbuttonB">
+			<li><a href="http://www.statsoft.com/textbook/statistics-glossary/" target="_blank">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b42.png" alt="" align="top"> Statistics Glossary</a></li>
+					</ul>
+
+	</li>
+</ul></div>
+<div class="buttons"><ul>
+	<li>
+		<ul class="leftbutton" id="leftbutton">
+			
+			<li><a href="http://www.statsoft.com/textbook/basic-statistics/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b2.png" alt="" align="top"> Basic Statistics</a></li>
+			<li><a href="http://www.statsoft.com/textbook/anova-manova/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b3.png" alt="" align="top"> ANOVA / MANOVA</a></li>
+			<li><a href="http://www.statsoft.com/textbook/association-rules/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b4.png" alt="" align="top"> Association Rules</a></li>
+			<li><a href="http://www.statsoft.com/textbook/boosting-trees-regression-classification/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b5.png" alt="" align="top"> Boosting Trees</a></li>
+			<li><a href="http://www.statsoft.com/textbook/canonical-analysis/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b6.png" alt="" align="top"> Canonical Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/chaid-analysis/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b7.png" alt="" align="top"> CHAID Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/classification-and-regression-trees/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b8.png" alt="" align="top"> C &amp; R Trees</a></li>
+			<li><a href="http://www.statsoft.com/textbook/classification-trees/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b9.png" alt="" align="top"> Classification Trees</a></li>
+			<li><a href="http://www.statsoft.com/textbook/cluster-analysis/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b10.png" alt="" align="top"> Cluster Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/correspondence-analysis/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b11.png" alt="" align="top"> Correspondence Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/data-mining-techniques/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b12.png" alt="" align="top"> Data Mining Techniques</a></li>
+			<li><a href="http://www.statsoft.com/textbook/discriminant-function-analysis/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b13.png" alt="" align="top"> Discriminant Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/distribution-fitting/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b14.png" alt="" align="top"> Distribution Fitting</a></li>
+			<li><a href="http://www.statsoft.com/textbook/experimental-design/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b15.png" alt="" align="top"> Experimental Design</a></li>
+			<li><a href="http://www.statsoft.com/textbook/principal-components-factor-analysis/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b16.png" alt="" align="top"> Factor Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/general-discriminant-analysis/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b17.png" alt="" align="top"> General Discrim. Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/general-linear-models/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b18.png" alt="" align="top"> General Linear Models</a></li>
+			<li><a href="http://www.statsoft.com/textbook/generalized-additive-models/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b19.png" alt="" align="top"> Generalized Additive Mod.</a></li>
+			<li><a href="http://www.statsoft.com/textbook/generalized-linear-models/?button=1">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b20.png" alt="" align="top"> Generalized Linear Mod.</a></li>
+			<li id="2"><a href="http://www.statsoft.com/textbook/general-regression-models/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b21.png" alt="" align="top"> General Regression Mod.</a></li>
+			<li><a href="http://www.statsoft.com/textbook/graphical-analytic-techniques/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b22.png" alt="" align="top"> Graphical Techniques</a></li>
+			<li><a href="http://www.statsoft.com/textbook/independent-components-analysis/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b23.png" alt="" align="top"> Ind.Components Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/multiple-regression/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b24.png" alt="" align="top"> Linear Regression</a></li>
+			<li><a href="http://www.statsoft.com/textbook/log-linear-analysis-frequency-tables/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b25.png" alt="" align="top"> Log-Linear Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/multivariate-adaptive-regression-splines/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b26.png" alt="" align="top"> MARSplines</a></li>
+			<li><a href="http://www.statsoft.com/textbook/machine-learning/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b27.png" alt="" align="top"> Machine Learning</a></li>
+			<li><a href="http://www.statsoft.com/textbook/multidimensional-scaling/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b28.png" alt="" align="top"> Multidimensional Scaling</a></li>
+			<li><a href="http://www.statsoft.com/textbook/neural-networks/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b29.png" alt="" align="top"> Neural Networks</a></li>
+			<li><a href="http://www.statsoft.com/textbook/nonlinear-estimation/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b30.png" alt="" align="top"> Nonlinear Estimation</a></li>
+			<li><a href="http://www.statsoft.com/textbook/nonparametric-statistics/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b31.png" alt="" align="top"> Nonparametric Statistics</a></li>
+			<li><a href="http://www.statsoft.com/textbook/partial-least-squares/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b32.png" alt="" align="top"> Partial Least Squares</a></li>
+			<li><a href="http://www.statsoft.com/textbook/power-analysis/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b33.png" alt="" align="top"> Power Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/process-analysis/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b34.png" alt="" align="top"> Process Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/quality-control-charts/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b35.png" alt="" align="top"> Quality Control Charts</a></li>
+			<li><a href="http://www.statsoft.com/textbook/reliability-and-item-analysis/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b36.png" alt="" align="top"> Reliability / Item Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/structural-equation-modeling/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b37.png" alt="" align="top"> SEPATH (Structural eq.)</a></li>
+			<li><a href="http://www.statsoft.com/textbook/survival-failure-time-analysis/?button=2">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b38.png" alt="" align="top"> Survival Analysis</a></li>
+			<li><a href="http://www.statsoft.com/textbook/text-mining/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b39.png" alt="" align="top"> Text Mining</a></li>
+			<li><a href="http://www.statsoft.com/textbook/time-series-analysis/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b40.png" alt="" align="top"> Time Series / Forecasting</a></li>
+			<li><a href="http://www.statsoft.com/textbook/variance-components-mixed-model-anova-ancova/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b41.png" alt="" align="top"> Variance Components</a></li>
+			<li><a href="http://www.statsoft.com/textbook/statistical-advisor/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b43.png" alt="" align="top"> Statistical Advisor</a></li>
+			<li><a href="http://www.statsoft.com/textbook/distribution-tables/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b44.png" alt="" align="top"> Distribution Tables</a></li>
+			<li><a href="http://www.statsoft.com/textbook/references-cited/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b45.png" alt="" align="top"> References Cited</a></li>
+			
+						
+		</ul>
+
+	</li>
+</ul>
+
+</div>
+<div class="buttonsC"><ul>
+	<li>
+		<ul class="leftbuttonC" id="leftbuttonC">
+		<li id="3"><a href="mailto:info@statsoft.com?subject=Electronic%20Statistics%20Textbook%20Comment">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/b46.png" alt="" align="top"> Send Comments</a></li>
+	<li><a href="http://www.statsoft.com/textbook/business-solutions/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/business.png" alt="" align="top"> Business Solutions</a></li>
+	<li><a href="http://www.statsoft.com/textbook/free-resources/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/free.png" alt="" align="top"> Free Resources</a></li>
+	<li><a href="http://www.statsoft.com/textbook/about-textbook/?button=3">&nbsp;&nbsp;<img src="Naive%20Bayes%20Classifier_files/about.png" alt="" align="top"> About Textbook</a></li>
+</ul>
+
+	</li>
+</ul></div>
+</div>
+</div>
+
+
+</div>
+
+<div class="scroll">
+
+
+<div class="est"><div class="estcontent"><div id="estx"><img src="Naive%20Bayes%20Classifier_files/spacer.gif" alt="" height="1" width="750"><br><a href="http://www.statsoft.com/"><img src="Naive%20Bayes%20Classifier_files/logoest.gif" alt="" border="0"><br><b>Creators of <em style="font-size: 15px">STATISTICA</em> Data Analysis Software and Services</b></a></div>
+
+  <div class="search">
+<div id="dnn_Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'dnn_SearchButton')">
+	
+                                <input name="dnn$Search" id="dnn_Search" class="gss_input" style="height:17px;width:236px;" type="text"> 
+                                <input name="dnn$SearchButton" id="dnn_SearchButton" class="searchbutton" src="Naive%20Bayes%20Classifier_files/search.gif" style="border-width:0px;" align="absmiddle" type="image">
+                                
+</div>
+</div>
+
+<div class="login" id="login">Welcome, <a id="dnn_USER1_cmdRegister" class="user" href="javascript:__doPostBack('dnn$USER1$cmdRegister','')">Register</a>
+                            &nbsp;|&nbsp;<a id="dnn_LOGIN1_cmdLogin" class="user" href="javascript:__doPostBack('dnn$LOGIN1$cmdLogin','')">Login</a></div>
+
+<div class="searchtext">Search the Electronic Statistics Textbook</div>
+
+<br>
+<div id="sep"><a href="http://www.statsoft.com/" class="breadcrumb">StatSoft.com</a><img src="Naive%20Bayes%20Classifier_files/bc_separator.png" class="sep"><span id="dnn_dnnBreadcrumb_lblBreadcrumb"><a href="http://www.statsoft.com/textbook/" class="breadcrumb">Textbook</a><img src="Naive%20Bayes%20Classifier_files/bc_separator.png" class="sep"><span class="breadcrumb">Naive Bayes Classifier</span></span><img src="Naive%20Bayes%20Classifier_files/bc_bgend.png" class="sepx"></div>
+<div id="dnn_ContentPane" valign="top" class="ContentPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-1532"><a name="1532"></a>
+<div class="c_head c_head_blue">
+    <div class="head_title">
+        <!--div class="c_actions">
+            
+        </div-->
+        <div class="c_icon">
+            
+        </div>
+ 
+    </div>
+    <!--div class="title_vis">
+        <a onclick="if (__dnn_ContainerMaxMin_OnClick(this, 'dnn_ctr1532_ModuleContent')) return false;" id="dnn_ctr1532_dnnVISIBILITY_cmdVisibility" title="Minimize" href="javascript:__doPostBack('dnn$ctr1532$dnnVISIBILITY$cmdVisibility','')"><img id="dnn_ctr1532_dnnVISIBILITY_imgVisibility" title="Minimize" src="/Portals/_default/Containers/StatSoft/images/DNN-minus.gif" alt="Minimize" style="border-width:0px;" /></a>    <span><span><input type="image" name="dnn$ctr1532$dnnACTIONBUTTON3$ctl00$ctl00$ctl00" title="Print" src="/images/action_print.gif" alt="Print" style="border-width:0px;" /></span>&nbsp;&nbsp;</span>
+    </div-->
+
+</div>
+<div class="c_content">
+    <div id="dnn_ctr1532_ContentPane" class="Normal c_contentpane DNNAlignleft">
+    <!-- Start_Module_1532 --><div id="dnn_ctr1532_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr1532_HtmlModule_lblContent" class="Normal">
+		<h1>Naive Bayes Classifier</h1>
+<p><a name="index"></a></p>
+<ul><a href="http://www.statsoft.com/textbook/naive-bayes-classifier/#Technical%20Notes">Technical Notes</a> </ul>
+    <h2><a style="font-weight: bold" name="overview"></a>Naive Bayes Classifier Introductory Overview</h2>
+    <p>The Naive Bayes Classifier technique is based on the so-called 
+Bayesian theorem and is particularly suited when the dimensionality of 
+the inputs is high. Despite its simplicity, Naive Bayes can often 
+outperform more sophisticated classification methods.</p>
+    <p><img alt="" style="width: 281px; height: 149px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro1.gif" border="0"></p>
+    <p>To demonstrate the concept of Naïve Bayes Classification, 
+consider the example displayed in the illustration above. As indicated, 
+the objects can be classified as either GREEN or RED. Our task is to 
+classify new cases as they arrive, i.e., decide to which class label 
+they belong, based on the currently exiting objects.</p>
+    <p>Since there are twice as many GREEN objects as RED, it is 
+reasonable to believe that a new case (which hasn't been observed yet) 
+is twice as likely to have membership GREEN rather than RED. In the 
+Bayesian analysis, this belief is known as the prior probability. Prior 
+probabilities are based on previous experience, in this case the 
+percentage of GREEN and RED objects, and often used to predict outcomes 
+before they actually happen.</p>
+    <p>Thus, we can write:</p>
+    <p><img alt="" style="width: 396px; height: 87px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro2.gif" border="0"></p>
+    <p>Since there is a total of 60 objects, 40 of which are GREEN and 20 RED, our prior probabilities for class membership are:</p>
+    <p><img alt="" style="width: 239px; height: 78px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro3.gif" border="0"></p>
+    <p><img alt="" style="width: 279px; height: 143px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro4.gif" border="0"></p>
+    <p>Having formulated our prior probability, we are now ready to 
+classify a new object (WHITE circle). Since the objects are well 
+clustered, it is reasonable to assume that the more GREEN (or RED) 
+objects in the vicinity of X, the more likely that the new cases belong 
+to that particular color. To measure this likelihood, we draw a circle 
+around X which encompasses a number (to be chosen a priori) of points 
+irrespective of their class labels. Then we calculate the number of 
+points in the circle belonging to each class label. From this we 
+calculate the likelihood:</p>
+    <p><img alt="" style="width: 477px; height: 84px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro5.gif" border="0"></p>
+    <p>From the illustration above, it is clear that Likelihood of X 
+given GREEN is smaller than Likelihood of X given RED, since the circle 
+encompasses 1 GREEN object and 3 RED ones. Thus:</p>
+    <p><img alt="" x-maintain-ratio="TRUE" style="border-right: medium none; border-top: medium none; float: none; border-left: medium none; width: 247px; border-bottom: medium none; height: 43px" src="Naive%20Bayes%20Classifier_files/NBEquation.gif" border="0"></p>
+    <p><img alt="" x-maintain-ratio="TRUE" style="border-right: medium none; border-top: medium none; float: none; border-left: medium none; width: 230px; border-bottom: medium none; height: 46px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro6.gif" border="0"></p>
+    <p>Although the prior probabilities indicate that X may belong to 
+GREEN (given that there are twice as many GREEN compared to RED) the 
+likelihood indicates otherwise; that the class membership of X is RED 
+(given that there are more RED objects in the vicinity of X than GREEN).
+ In the Bayesian analysis, the final classification is produced by 
+combining both sources of information, i.e., the prior and the 
+likelihood, to form a posterior probability using the so-called Bayes' 
+rule (named after Rev. Thomas Bayes 1702-1761).</p>
+    <p><img alt="" x-maintain-ratio="TRUE" style="border-right: medium none; border-top: medium none; float: none; border-left: medium none; width: 423px; border-bottom: medium none; height: 192px" src="Naive%20Bayes%20Classifier_files/NBEquation2.gif" border="0"></p>
+    <p>Finally, we classify X as RED since its class membership achieves the largest posterior probability.</p>
+    <p style="margin-bottom: 0px"><b style="font-weight: bold">Note.</b>The
+ above probabilities are not normalized. However, this does not affect 
+the classification outcome since their normalizing constants are the 
+same.</p>
+    <!--(Table)=========================================================--><!--begin!kadov{{-->
+    <div align="right"><!--}}end!kadov-->
+    <table x-use-null-cells="">
+        <tbody>
+            <tr>
+                <td>
+                <p style="margin-bottom: 0px"><a href="http://www.statsoft.com/textbook/naive-bayes-classifier/#index"><font style="font-size: xx-small" size="1">To index</font></a></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--begin!kadov{{--></div>
+    <!--}}end!kadov-->
+    <h2><a style="font-weight: bold" name="Technical Notes"></a>Technical Notes</h2>
+    <p>In the previous section, we provided an intuitive example for 
+understanding classification using Naive Bayes. In this section are 
+further details of the technical issues involved. Naive Bayes 
+classifiers can handle an arbitrary number of independent variables 
+whether continuous or categorical. Given a set of variables, X = 
+{x1,x2,x...,xd}, we want to construct the posterior probability for the 
+event Cj among a set of possible outcomes C = {c1,c2,c...,cd}. In a more
+ familiar language, X is the predictors and C is the set of categorical 
+levels present in the dependent variable. Using Bayes' rule:</p>
+    <p><img alt="" style="width: 301px; height: 25px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro8.gif" border="0"></p>
+    <p>where p(Cj | x1,x2,x...,xd) is the posterior probability of class
+ membership, i.e., the probability that X belongs to Cj. Since Naive 
+Bayes assumes that the conditional probabilities of the independent 
+variables are statistically independent we can decompose the likelihood 
+to a product of terms:</p>
+    <p><img alt="" style="width: 168px; height: 43px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro9.gif" border="0"></p>
+    <p>and rewrite the posterior as:</p>
+    <p><img alt="" style="width: 206px; height: 42px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro10.gif" border="0"></p>
+    <p>Using Bayes' rule above, we label a new case X with a class level Cj that achieves the highest posterior probability.</p>
+    <p>Although the assumption that the predictor (independent) 
+variables are independent is not always accurate, it does simplify the 
+classification task dramatically, since it allows the class conditional 
+densities p(xk | Cj) to be calculated separately for each variable, 
+i.e., it reduces a multidimensional task to a number of one-dimensional 
+ones. In effect, Naive Bayes reduces a high-dimensional density 
+estimation task to a one-dimensional kernel density estimation. 
+Furthermore, the assumption does not seem to greatly affect the 
+posterior probabilities, especially in regions near decision boundaries,
+ thus, leaving the classification task unaffected.</p>
+    <p>Naive Bayes can be modeled in several different ways including normal, lognormal, gamma and Poisson density functions:</p>
+    <p><img alt="" style="width: 589px; height: 356px" src="Naive%20Bayes%20Classifier_files/NaiveBayesIntro11.gif" border="0"></p>
+    <p style="margin-bottom: 0px"><b style="font-weight: bold">Note.</b>
+ Poisson variables are regarded here as continuous since they are 
+ordinal rather than truly categorical. For categorical variables, a 
+discrete probability is used with values of the categorical level being 
+proportional to their conditional frequency in the training data.</p>
+    <!--(Table)=========================================================--><!--begin!kadov{{-->
+    <div align="right"><!--}}end!kadov-->
+    <table x-use-null-cells="">
+        <tbody>
+            <tr>
+                <td>
+                <p style="margin-bottom: 0px"><a href="http://www.statsoft.com/textbook/naive-bayes-classifier/#index"><font style="font-size: xx-small" size="1">To index</font></a></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p>&nbsp;</p>
+	</div>
+
+</div><!-- End_Module_1532 --></div>
+</div>
+<div class="c_footer">
+    
+    
+
+    
+</div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-2470"><a name="2470"></a>
+<div class="c_head c_head_blue">
+    <div class="head_title">
+        <!--div class="c_actions">
+            
+        </div-->
+        <div class="c_icon">
+            
+        </div>
+ 
+    </div>
+    <!--div class="title_vis">
+        <a onclick="if (__dnn_ContainerMaxMin_OnClick(this, 'dnn_ctr2470_ModuleContent')) return false;" id="dnn_ctr2470_dnnVISIBILITY_cmdVisibility" title="Minimize" href="javascript:__doPostBack('dnn$ctr2470$dnnVISIBILITY$cmdVisibility','')"><img id="dnn_ctr2470_dnnVISIBILITY_imgVisibility" title="Minimize" src="/Portals/_default/Containers/StatSoft/images/DNN-minus.gif" alt="Minimize" style="border-width:0px;" /></a>    
+    </div-->
+
+</div>
+<div class="c_content">
+    <div id="dnn_ctr2470_ContentPane" class="Normal c_contentpane">
+    <!-- Start_Module_2470 --><div id="dnn_ctr2470_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr2470_HtmlModule_lblContent" class="Normal">
+	<script type="text/javascript"> 
+  var cdJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); 
+  document.write(unescape("%3Cscript src='" + cdJsHost + "analytics.clickdimensions.com/ts.js' type='text/javascript'%3E%3C/script%3E")); 
+</script><script src="Naive%20Bayes%20Classifier_files/ts.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+  var cdAnalytics = new clickdimensions.Analytics('analytics.clickdimensions.com'); 
+  cdAnalytics.setAccountKey('ar5W298OnEUiUGcwmUiCut'); 
+  cdAnalytics.setDomain('statsoft.com'); 
+  cdAnalytics.trackPage(); 
+</script> 
+<!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-S9LQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-S9LQ');</script><!-- End Google Tag Manager -->
+</div>
+
+</div><!-- End_Module_2470 --></div>
+</div>
+<div class="c_footer">
+    
+    
+
+    
+</div>
+</div></div>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+    
+
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Naive%20Bayes%20Classifier_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-385206-1");
+pageTracker._initData();
+pageTracker._setDomainName("statsoft.com");
+pageTracker._trackPageview();
+document.getElementById('').scrollIntoView(true);pageTracker._setVar('');pageTracker._addTrans('Naive Bayes Classifier , 5:07:18 PM, Naive Bayes Classifier ,Naive Bayes Classifier ,Naive Bayes Classifier ,Naive Bayes Classifier ,Naive Bayes Classifier ,Naive Bayes Classifier  '); pageTracker._addItem(' Naive Bayes Classifier ,5:07:18 PM,Naive Bayes Classifier ,Naive Bayes Classifier ,Naive Bayes Classifier ,Naive Bayes Classifier ');
+    
+    
+    
+    
+  
+   pageTracker._trackTrans();
+
+</script>
+
+
+
+
+
+
+
+
+        <input name="ScrollTop" id="ScrollTop" type="hidden">
+        <input name="__dnnVariable" id="__dnnVariable" value="{&quot;__scdoff&quot;:&quot;1&quot;,&quot;containerid_dnn_ctr1532_ModuleContent&quot;:&quot;1532&quot;,&quot;cookieid_dnn_ctr1532_ModuleContent&quot;:&quot;_Module1532_Visible&quot;,&quot;min_icon_1532&quot;:&quot;/Portals/_default/Containers/StatSoft/images/DNN-minus.gif&quot;,&quot;max_icon_1532&quot;:&quot;/Portals/_default/Containers/StatSoft/images/DNN-plus.gif&quot;,&quot;max_text&quot;:&quot;Maximize&quot;,&quot;min_text&quot;:&quot;Minimize&quot;,&quot;containerid_dnn_ctr2470_ModuleContent&quot;:&quot;2470&quot;,&quot;cookieid_dnn_ctr2470_ModuleContent&quot;:&quot;_Module2470_Visible&quot;,&quot;min_icon_2470&quot;:&quot;/Portals/_default/Containers/StatSoft/images/DNN-minus.gif&quot;,&quot;max_icon_2470&quot;:&quot;/Portals/_default/Containers/StatSoft/images/DNN-plus.gif&quot;}" type="hidden">
+        
+    
+<script type="text/javascript" src="Naive%20Bayes%20Classifier_files/initWidgets.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+
+<script language="javascript"><!--
+bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script></body></html>

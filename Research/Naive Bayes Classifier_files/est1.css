@@ -1,0 +1,985 @@
+body
+{
+	background: #FFFFFF url("/textbook/images/StatSoftBG.png") repeat-x;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+
+
+}
+html {
+overflow: auto;
+}
+body, img
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	
+}
+
+div.scroll {
+background: #FFFFFF url("/textbook/images/StatSoftBG.png") repeat-x;
+height: 100%;
+overflow: auto;
+margin-left: 218px;
+position: absolute;
+float:right;
+margin-right: 0px;
+*left:0px;
+*overflow-x:hidden;
+}
+
+
+
+
+
+.est
+{	
+	background: #F4F4F4 url("/textbook/images/bggradient3.png") repeat-x top left;
+	position: relative;
+	margin-top: 15px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+	*width:97%;
+	*left:-10px;
+	 
+
+}
+.est2
+{	
+	background: #F6F6F6 url("/textbook/images/bggradient3.png") repeat-x top left;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+	min-width: 185px;
+	width: 185px;
+
+}
+
+.estcontent 
+{	
+	position: relative;
+	padding: 15px 15px 15px 15px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+	top: 0px;
+	
+
+
+	
+
+	
+
+
+}
+.estcontent a:visited 
+{	
+
+font-family: "Segoe UI", "Arial", sans-serif;
+font-size: 0.99em;
+color: #A80000;
+}
+
+.estcontent a 
+{	
+font-family: "Segoe UI", "Arial", sans-serif;
+font-size: 0.99em;
+color: #0043FF;
+}
+
+
+.estcontent2
+{	
+	position: relative;
+	padding: 5px 0px 0px 5px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 18px;
+	color: #000000;
+	font-weight: 500;
+	top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+div.scroll2 {
+position: absolute;
+height:100%;
+width: 216px;
+overflow: auto;
+background: #ADAEAE url("/textbook/images/StatSoftBG2.png") repeat-x;
+
+float: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.scroll2 a:visited{
+color: #A80000;
+font-weight:normal;
+ font-size:12px;
+}
+
+div.scroll2 a {
+  font-weight:normal;
+   font-size:12px;
+}
+
+.scroll2 a:hover {
+  font-weight:normal;
+   font-size:12px;
+}
+
+
+
+
+
+
+
+.estbottom {
+background: #716F64 url("/textbook/images/bottomgradient.png") repeat-x;
+height:8%;
+width: 100%;
+margin: 0px;
+position: absolute;
+bottom: 0px;
+}
+.estbottomcontent
+{	
+	position: relative;
+	padding: 10px 15px 15px 15px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+
+}
+.statcom{
+ position:relative;
+background: #716F64 url("/textbook/images/wwwstatsoftcom.png") no-repeat;
+ width:151px;
+  height:24px;
+    float:left;
+    padding:7px 0px 0px 40px;
+  
+}
+
+.statcom a{
+color:#ffffff;
+ font-weight:bold;
+}
+
+.glossest{
+ position:relative;
+background: #716F64 url("/textbook/images/wwwstatsoftcom.png") no-repeat;
+ width:151px;
+  height:24px;
+    float:right;
+     padding:7px 0px 0px 40px;
+  
+}
+
+.glossest a{
+color:#ffffff;
+ font-weight:bold;
+}
+table
+{
+	text-align: left;
+}
+a:focus 
+{
+outline-style: none;
+}
+a:active
+{
+  outline: none;
+}
+
+#map
+{
+	background-color: #ffffff;
+	color: #000077;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+	height: 370px;
+	text-align: left;
+	width: 960px;
+	border-top: 0px solid #000000;
+
+	
+}
+.pagewidth
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+.navigation
+{
+	border: none;
+	color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -12px;
+	width: 960px;
+	z-index: 3;
+}
+.navigation li
+{
+	display: inline;
+}
+.content
+{
+	height: 832px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 2;
+	width: 960px;
+}
+.container
+{
+	height: 832px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	position: relative;
+	top: -280px;
+	z-index: 2;
+	width: 960px;
+	left: -15px;
+}
+.tabbar
+{
+	background: url("/textbook/images/tabbarbg.png") repeat-x;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -40px;
+	z-index: 1;
+	vertical-align: super;
+	padding: 0px 0px 0px 0px;
+	height: 29px;
+	width: 960px;
+	left: -15px;
+}
+
+.tabbartext
+{
+	background: url("/textbook/images/tabbarbg.png") repeat-x;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 15px;
+	color: #777777;
+	top: -3px;
+	z-index: 1;
+	padding: 0px 0px 0px 0px;
+	height: 29px;
+	top: 5px;
+}
+
+.tab
+{
+	background: #000000 url("/textbook/images/tabbg.png") repeat-x top left;
+	position: relative;
+	height: 29px;
+	padding: 0px 6px 10px 5px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 15px;
+	color: #9E9D9A;
+	top: 0px;
+	overflow: hidden;
+	vertical-align: top;
+}
+
+.tabx
+{	position: relative;
+	height: 29px;
+	overflow: hidden;
+	top: 0px;
+	}
+.power
+{
+	position: relative;
+	background: #848484 url("/textbook/images/powergradient.png") repeat-x top left;
+	height: 370px;
+	width: 960px;
+	margin: 0;
+	top: -5px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+	border-top: 4px solid #000000;
+}
+.mainbg
+{
+	background: #F3F3F3 url("/textbook/images/bggradient.png") repeat-x ;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 10px 15px 0px 15px;
+	vertical-align: top;
+
+}
+div.search
+{
+align: right;
+position: absolute;
+right: 20px;
+top: 45px;
+font-family: "Segoe UI", "Arial", sans-serif;
+color: #223770;
+vertical-align:middle;
+}
+.searchtext
+{
+position: absolute;
+right: 7px;
+top: 30px;
+font-family: "Segoe UI", "Arial", sans-serif;
+font-size: 0.99em;
+color: #ffffff;
+width: 280px;
+
+}
+
+.searchbutton{
+position: relative;
+top: 1px;
+}
+
+div.login
+{
+position: absolute;
+right: 20px;
+top: 12px;
+font-family: "Segoe UI", "Arial", sans-serif;
+font-size: 0.99em;
+color: #223770;
+ padding-right:25px;
+  visibility:hidden;
+
+
+}
+
+div.britanicatext
+{
+position: absolute;
+right: 10px;
+top: 121px;
+font-family: "Segoe UI", "Arial", sans-serif;
+font-size: 0.99em;
+color: #223770;
+width: 180px;
+font-weight: bold;
+
+}
+
+.rightcorner
+{
+position: absolute;
+right: 0px;
+top: 0px;
+}
+
+.main
+{
+	margin-left: 25px;
+	margin-right: 25px;
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	width: 100%;
+}
+.rt
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top:0px;
+	width: 660px;
+}
+.bt
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 660px;
+}
+.statsoftlogoreflect
+{
+	position: absolute;
+	margin-left: 15px;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+.bottmobox3
+{
+	position: absolute;
+	margin-left: 248px;
+	margin-right: auto;
+	margin-top: 540px;
+		font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+}
+.bottmobox2
+{
+	position: absolute;
+	margin-left: 15px;
+	margin-right: auto;
+	margin-top: 540px;
+		font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+}
+.bottombox2bg
+{
+background: #848484 url("/textbook/images/boxmiddle.png") repeat-x ;
+border-left: solid #cecdcd;
+border-left-width: 1px;
+border-right: solid #cecdcd;
+border-right-width: 1px;
+width: 214px;
+}
+.bottmobox4
+{
+	position: absolute;
+	margin-left: 248px;
+	margin-right: auto;
+	margin-top: 870px;
+		font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+}
+.bottombox4bg
+{
+background: #848484 url("/textbook/images/boxmiddle.png") repeat-x ;
+border-left: solid #cecdcd;
+border-left-width: 1px;
+border-right: solid #cecdcd;
+border-right-width: 1px;
+width: 698px;
+}
+
+
+
+
+input {
+background-color: #ffffff;
+color: #515151;
+font-family: "Segoe UI", "Arial", sans-serif;
+font-size: 10pt
+} 
+.est
+{	
+	position: relative;
+	margin: 15px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+}
+
+.features
+{	
+	position: relative;
+	background: #B5C0DC url("/textbook/images/featuresgradient.png") repeat-x top left;
+	height: 370px;
+	width: 960px;
+	margin: 0;
+	top: -5px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	font-size: 0.99em;
+		border-top: 4px solid #000000;
+}
+.estlogo
+{
+	font-size: 0.99em;
+	left: 15px;
+	position: relative;
+	top: 15px;
+	width: 930px;
+}
+.estsearch
+{
+	left: 650px;
+	position: relative;
+	top: -260px;
+}
+.britanicalogo
+{	
+	position: relative;
+	left: 740px;
+	top: -250px;
+}
+.esttext
+{
+	left: 645px;
+	position: relative;
+	top: -240px;
+	font-family: "Arial", sans-serif;
+}
+.menuminwidth0
+{
+	border: 0;
+	height: 55px;
+	margin: 0;
+	min-width: 1070px;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 6;
+}
+.menuminwidth0x
+{
+	border: 0;
+	height: 55px;
+	margin: 0;
+	min-width: 960px;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 6;
+}
+@media print, projection
+{
+	.menuminwidth0
+	{
+		d\isplay: none;
+	}
+}
+* html .menuminwidth1
+{
+	border-left: 870px solid #fff;
+	float: left;
+	height: 1px;
+	position: relative;
+}
+* html .menuminwidth1x
+{
+	border-left: 870px solid #fff;
+	float: left;
+	height: 1px;
+	position: relative;
+}
+* html .menuminwidth2
+{
+	height: 1px;
+	margin-left: -870px;
+	position: relative;
+}
+* html .menuminwidth2
+{
+	height: 1px;
+	margin-left: -870px;
+	position: relative;
+}
+#text
+{
+	background: #cfcdcd;
+	border: 1px solid #404040;
+	font-size: 14px !important;
+	margin: 0;
+	padding: 0 0 0 2px;
+	position: absolute;
+	right: 65px;
+	top: 7px;
+	width: 12em;
+}
+#textx
+{
+	background: #cfcdcd;
+	border: 1px solid #404040;
+	font-size: 14px !important;
+	margin: 0;
+	padding: 0 0 0 2px;
+	position: absolute;
+	right: 65px;
+	top: 7px;
+	width: 12em;
+}
+
+.leftbutton
+{
+    font-family:Arial;
+
+}
+.buttons ul
+{
+	margin: 0;
+	height: 1210px;
+	padding: 0px 0px 0px 0px;
+	display: block;
+	width: 185px;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.99em;
+	text-align: left;
+	font-family:Arial;
+}
+.buttons li
+{
+	
+	float: left;
+	height: auto;
+	margin: 0;
+	position: relative;
+	display: block;
+	width: 185px;
+	text-decoration: none;
+	padding: 0px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	
+}
+.buttons ul li table
+{
+	font-size: 0.99em;
+	margin: 0;
+	height: auto;
+	display: block;
+	width: 185px;
+	position: relative;
+	text-decoration: none;
+	padding: 0px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+}
+.buttons ul li a
+{
+	background: url("/textbook/images/button3.png") no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	width: 185px;
+	position: relative;
+	padding: 6px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	color: #000000;
+	    font-family:Arial;
+	
+}
+
+.buttons ul li a:visited
+{
+	background: url("/textbook/images/button3.png") no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	width: 185px;
+	position: relative;
+	padding: 6px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	color: #A80000;
+	
+	
+}
+
+
+
+.buttons ul li:hover ul li:hover a,
+.buttons ul li a:hover ul li a:hover 
+{ 
+	color: #ffffff;
+	background: url("/textbook/images/button7.png") no-repeat;
+	background-position: 0px 0px;
+	padding: 6px 0px 0px 0px;
+	height: 22px;
+	width: 185px;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.99em;
+	text-align: left;
+} 
+
+
+.buttonsA ul
+{
+	margin: 0;
+	height: 28px;
+	padding: 0px 0px 0px 0px;
+	display: block;
+	width: 185px;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.99em;
+	text-align: left;
+}
+.buttonsA li
+{
+	
+	float: left;
+	height: auto;
+	margin: 0;
+	position: relative;
+	display: block;
+	width: 185px;
+	text-decoration: none;
+	padding: 0px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	
+}
+.buttonsA ul li table
+{
+	font-size: 0.99em;
+	margin: 0;
+	height: auto;
+	display: block;
+	width: 185px;
+	position: relative;
+	text-decoration: none;
+	padding: 0px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+}
+.buttonsA ul li a
+{
+	background: url("/textbook/images/button3.png") no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	width: 185px;
+	position: relative;
+	padding: 6px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	color: #000000;
+	
+}
+
+.buttonsA ul li a:visited
+{
+	background: url("/textbook/images/button3.png") no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	width: 185px;
+	position: relative;
+	padding: 6px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	color: #A80000;
+	
+	
+}
+
+
+
+.buttonsA ul li:hover ul li:hover a,
+.buttonsA ul li a:hover ul li a:hover 
+{ 
+	color: #ffffff;
+	background: url("/textbook/images/button7.png") no-repeat;
+	background-position: 0px 0px;
+	padding: 6px 0px 0px 0px;
+	height: 22px;
+	width: 185px;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.99em;
+	text-align: left;
+} 
+
+
+
+
+.buttonsB ul
+{
+	margin: 0;
+	height: 28px;
+	padding: 0px 0px 0px 7px;
+	display: block;
+	width: 150px;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.99em;
+	text-align: left;
+}
+.buttonsB li
+{
+	
+	float: left;
+	height: auto;
+	margin: 0;
+	position: relative;
+	display: block;
+	width: 150px;
+	text-decoration: none;
+	padding: 0px 0px 0px 7px;
+	font-size: 0.99em;
+	text-align: left;
+	
+}
+.buttonsB ul li table
+{
+	font-size: 0.99em;
+	margin: 0;
+	height: auto;
+	display: block;
+	width: 150px;
+	position: relative;
+	text-decoration: none;
+	padding: 0px 0px 0px 7px;
+	font-size: 0.99em;
+	text-align: left;
+}
+.buttonsB ul li a
+{
+	background: url("/textbook/images/button3Gxbottom.png") no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	width: 150px;
+	position: relative;
+	padding: 6px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	color: #000000;
+	
+}
+
+.buttonsB ul li a:visited
+{
+	background: url("/textbook/images/button3Gxbottom.png") no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	width: 150px;
+	position: relative;
+	padding: 6px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	color: #A80000;
+	
+	
+}
+
+
+
+.buttonsB ul li:hover ul li:hover a,
+.buttonsB ul li a:hover ul li a:hover 
+{ 
+	color: #ffffff;
+	background: url("/textbook/images/button7Gbottom.png") no-repeat;
+	background-position: 0px 0px;
+	padding: 6px 0px 0px 0px;
+	height: 22px;
+	width: 150px;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.99em;
+	text-align: left;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.buttonsC ul
+{
+	margin: 0;
+	height: 116px;
+	padding: 0px 0px 0px 7px;
+	display: block;
+	width: 150px;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.99em;
+	text-align: left;
+}
+.buttonsC li
+{
+	
+	float: left;
+	height: auto;
+	margin: 0;
+	position: relative;
+	display: block;
+	width: 150px;
+	text-decoration: none;
+	padding: 0px 0px 0px 7px;
+	font-size: 0.99em;
+	text-align: left;
+	
+}
+.buttonsC ul li table
+{
+	font-size: 0.99em;
+	margin: 0;
+	height: auto;
+	display: block;
+	width: 150px;
+	position: relative;
+	text-decoration: none;
+	padding: 0px 0px 0px 7px;
+	font-size: 0.99em;
+	text-align: left;
+}
+.buttonsC ul li a
+{
+	background: url("/textbook/images/button3Gxbottom.png") no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	width: 150px;
+	position: relative;
+	padding: 6px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	color: #000000;
+	
+}
+
+.buttonsC ul li a:visited
+{
+	background: url("/textbook/images/button3Gxbottom.png") no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	width: 150px;
+	position: relative;
+	padding: 6px 0px 0px 0px;
+	font-size: 0.99em;
+	text-align: left;
+	color: #A80000;
+	
+	
+}
+
+
+
+.buttonsC ul li:hover ul li:hover a,
+.buttonsC ul li a:hover ul li a:hover 
+{ 
+	color: #ffffff;
+	background: url("/textbook/images/button7Gbottom.png") no-repeat;
+	background-position: 0px 0px;
+	padding: 6px 0px 0px 0px;
+	height: 22px;
+	width: 150px;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.99em;
+	text-align: left;
+} 

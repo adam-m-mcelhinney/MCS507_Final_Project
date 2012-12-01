@@ -1,0 +1,387 @@
+.branding-top {
+	background: url(dnn_large_banner.jpg) no-repeat center;
+	width: 890px;
+	height: 340px;
+	clear: both;
+	overflow: hidden;
+}
+.branding-top p {
+	padding: 270px 60px 0 60px;
+	font-size: 1.4em;
+	color: #333;
+}
+
+.branding-top span, .branding-bottom span{
+display:block;
+}
+
+.dt{
+color:#003366;
+font-family:Tahoma,Arial,Helvetica;
+}
+
+
+.branding-bottom {
+	clear: both;
+	margin-top: 1em;
+	overflow: hidden;
+}
+.branding-bottom ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	clear: both;
+}
+.branding-bottom li {
+	list-style: none;
+	margin: 0 10px 0 0;
+	padding: 0;
+	display: block;
+	width: 170px;
+	height: 250px;
+	float: left;
+}
+
+.branding-bottom li.training {
+	margin: 0;
+}
+
+.branding-bottom .dl{
+	background: url(itembg.gif) repeat-y;
+	margin: 33px 0 0 0;
+	padding: 0 10px 10px 10px;
+}
+.branding-bottom .dd  {
+	margin-left: 10px;
+	height: 66px;
+}
+.branding-bottom .dt{
+	font-size: 90%;
+	text-align: center;
+	padding-top: 65px;
+	margin-bottom: 1.75em;
+	font-weight: bold;
+}
+
+.branding-bottom .commmunity {
+	background: url(community_title.gif) no-repeat top left;
+}
+
+.commmunity .dt  {
+	background: url(community_icon.gif) no-repeat;
+	background-position: 50% 10px;
+}
+.branding-bottom .marketplace {
+	background: url(marketplace_title.gif) no-repeat top left;
+}
+.marketplace .dt  {
+	background: url(marketplace_icon.gif) no-repeat;
+	background-position: 50% 10px;
+}
+.branding-bottom .conferences {
+	background: url(conferences_title.gif) no-repeat top left;
+}
+.conferences .dt  {
+	background: url(conferences_icon.gif) no-repeat;
+	background-position: 50% 10px;
+}
+.branding-bottom .training {
+	background: url(training_title.gif) no-repeat top left;
+}
+.training .dt {
+	background: url(training_icon.gif) no-repeat;
+	background-position: 50% 10px;
+}
+.branding-bottom .support {
+	background: url(support_title.gif) no-repeat top left;
+}
+.support .dt {
+	background: url(support_icon.gif) no-repeat;
+	background-position: 50% 10px;
+}
+
+/* Changes to make default install page XHTML compliant */
+span.bt {
+	margin: 0;
+	padding: 0;
+	background: url(item_bt_bg.gif) no-repeat bottom;
+	height: 32px;
+	width: 170px;
+}
+
+
+#LoginInfo
+{
+	width:660px; 
+	float:left;
+}
+#LoginInfo h3
+{
+	background-color: #f7f7f7;
+	color: #0052DB;
+	padding: 2px 0px;
+}
+#LoginInfo dd, #LoginInfo dt 
+{
+	display:inline;
+}
+#LoginInfo dt
+{
+	font-weight:bold;
+	color: #333;
+}
+#LoginInfo p.LoginNotes
+{
+	font-size: .8em;
+}
+#LoginInfo div.LoginBlock {
+	float: left;
+	width: 310px;
+	padding: 5px 5px;
+	margin: 0px 2px;
+	border: 1px #f0f0f0 solid;
+}
+.SponsorIcon
+{
+	margin: 5px 26px; 
+	float: left;
+}
+#QuickLinks 
+{
+	background-color:#f0f0f0;
+	border: 1px gray dotted;
+	padding: 2px 5px;
+	margin-right:5px;
+	width: 200px;
+	float:left;
+}
+div.hr
+{
+	height: 2px;
+	background-color: #0052DB;
+	margin: 5px 0 15px 0;
+	clear:both;
+}
+div.hr hr
+{
+	display: none;
+}
+
+.pncEvents_Cal {
+
+background-color: #219B37;
+
+}
+
+.pncEvents_CalHeader {
+
+background-color: #013784;
+
+height: 20px;
+
+text-align: left;
+
+box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+color: #f0f0d8;
+
+font-family: Arial;
+
+font-size: 8pt;
+
+line-height: 12pt;
+
+letter-spacing:0.06em;
+
+text-align: center;
+
+border-left: 1px solid #013784;
+
+border-right: 1px solid #013784;
+
+}
+
+ 
+
+.pncEvents_CalHeader td {
+
+background-color: #013784;
+
+height: 20px;
+
+text-align: left;
+
+box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+color: #f0f0d8;
+
+font-family: Arial;
+
+font-size: 8pt;
+
+line-height: 12pt;
+
+letter-spacing:0.06em;
+
+text-align: center;
+border: 3px solid #013784;
+
+}
+
+.pncEvents_CalDayHeader {
+
+background-color: #B3B2B2;
+
+border: 1px solid #E4E4E2;
+
+font-size: 10px;
+
+font-weight: bold;
+
+font-family: Arial;
+
+text-align: center;
+
+height: 20px;
+
+color: #57574E;
+
+}
+
+.pncEvents_CalSelector {
+
+color: #fff;
+
+}
+
+.pncEvents_CalDay {
+
+background-color: #FFFFC0;
+
+border: 1px solid #cdcdcd;
+
+font-size: 10px;
+
+font-family: Tahoma;
+
+text-align: Left;
+
+height: 20px;
+
+width: 25px;
+
+color: #232323;
+
+text-align: center;
+
+}
+
+.pncEvents_CalToday {
+
+background-color: #7D7D7D;
+
+height: 20px;
+
+width: 25px;
+
+text-align: left;
+
+border: 1px solid #E4E4E2;
+
+box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+color: #ffffff;
+
+font-family: Arial;
+
+font-size: 8pt;
+
+text-align: center;
+
+}
+
+.pncEvents_CalSelectedDay {
+
+background-color: #B1DA17;
+
+border: 1px solid #cdcdcd;
+
+font-size: 10px;
+
+font-family: Tahoma;
+
+text-align: Left;
+
+height: 20px;
+
+width: 25px;
+
+color: #ffffff;
+
+text-align: center
+
+}
+
+.pncEvents_CalWeekendDay {
+
+background-color: #E0E0E0;
+
+border: 1px solid #ffffff;
+
+font-size: 10px;
+
+font-family: Tahoma;
+
+text-align: Left;
+
+height: 20px;
+
+width: 25px;
+
+color: #ffffff;
+
+text-align: center
+
+}
+
+.pncEvents_CalOtherMonthDay {
+
+background-color: #ffffff;
+
+border: 1px solid #E4E4E2;
+
+font-size: 10px;
+
+font-family: Tahoma;
+
+text-align: Left;
+
+height: 20px;
+
+width: 25px;
+
+color: #cdcdcd;
+
+text-align: center
+
+}
+
+A.CommandButton:link {color:#0052DB;  text-decoration:none; font-weight:bold;
+}
+
+A.CommandButton:visited  {color:#0052DB;  text-decoration:none; font-weight:bold;
+}
+
+A.CommandButton:hover    {color:#0052DB; text-decoration:underline;
+}
+    
+A.CommandButton:active   {color:#0052DB;  text-decoration:none; font-weight:bold;
+}
+
