@@ -50,7 +50,7 @@ def unique_split(data,class_col):
     return p
 
 
-data = orange.ExampleTable("2_groups")
+data = orange.ExampleTable("2_groups_2")
 print data.domain.attributes
 print data[:4]
 
@@ -100,7 +100,7 @@ ax1 = fig.add_subplot(111)
 ax1.scatter(X11, X12, s=10, c='b', marker="+")
 ax1.scatter(X21, X22, s=10, c='c', marker="o")
 #ax1.scatter(X31, X32, s=10, c='y', marker="x")
-plt.title('Plot of Three Classes of Data')
+plt.title('Plot of Two Classes of Data')
 plt.show()
 
 ########################
@@ -148,7 +148,7 @@ ax1.scatter(X11, X12, s=10, c='b', marker="+")
 ax1.scatter(X21, X22, s=10, c='c', marker="o")
 #ax1.scatter(X31, X32, s=10, c='y', marker="x")
 ax1.scatter(X1w, X2w, s=10, c='m', marker="^")
-plt.title('Plot of Three Classes of Data, Showing the Misclassified Elements')
+plt.title('Plot of Two Classes of Data, Showing the Misclassified Elements')
 plt.show()
     
 # output the results
