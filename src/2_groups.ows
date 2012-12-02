@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<schema>
+	<widgets>
+		<widget caption="Paint Data" widgetName="OWPaintData" xPos="30" yPos="150"/>
+		<widget caption="Save" widgetName="OWSave" xPos="140" yPos="150"/>
+	</widgets>
+	<channels>
+		<channel enabled="1" inWidgetCaption="Save" outWidgetCaption="Paint Data" signals="[('Data', 'Data')]"/>
+	</channels>
+	<settings settingsDictionary="{'Save': &quot;(dp1\nS'widgetHeight'\np2\nI137\nsS'widgetXPosition'\np3\nI1564\nsS'widgetYPosition'\np4\nI430\nsS'widgetShown'\np5\nI0\nsS'savedWidgetGeometry'\np6\nS'\\x01\\xd9\\xd0\\xcb\\x00\\x01\\x00\\x00\\x00\\x00\\x06\\x1c\\x00\\x00\\x01\\xae\\x00\\x00\\x07V\\x00\\x00\\x02O\\x00\\x00\\x06\\x1f\\x00\\x00\\x01\\xc4\\x00\\x00\\x07S\\x00\\x00\\x02L\\x00\\x00\\x00\\x01\\x00\\x00'\np7\nsS'widgetWidth'\np8\nI309\nsS'selectedFileName'\np9\nS''\nsS'recentFiles'\np10\n(lp11\nVC:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507_Final_Project/2_groups.data\np12\naVC:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507HW/MCS 507 Homework 4/MCS507--Project-3/3_groups.data\np13\naVC:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507ProjectTwo/data/test.data\np14\naVC:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507ProjectTwo/data/painted_data_wo_outlier.data\np15\naVC:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507ProjectTwo/data/painted_data_wo_outlier..data\np16\naVC:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507ProjectTwo/data/painted_data_wo_outlier.tab\np17\naVC:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507ProjectTwo/data/example_data.tab\np18\nas.&quot;, 'Paint Data': &quot;(dp1\nS'widgetHeight'\np2\nI1005\nsS'widgetXPosition'\np3\nI88\nsS'widgetYPosition'\np4\nI-4\nsS'widgetShown'\np5\nI0\nsS'savedWidgetGeometry'\np6\nS'\\x01\\xd9\\xd0\\xcb\\x00\\x01\\x00\\x00\\x00\\x00\\x00X\\xff\\xff\\xff\\xfc\\x00\\x00\\x05\\x03\\x00\\x00\\x04\\x03\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xff\\xff\\xff\\xfe\\xff\\xff\\xff\\xfe\\x00\\x00\\x00\\x00\\x02\\x00'\np7\nsS'widgetWidth'\np8\nI1188\nsS'commitOnChange'\np9\nI00\ns.&quot;}"/>
+</schema>

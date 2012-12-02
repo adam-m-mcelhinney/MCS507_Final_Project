@@ -1,0 +1,9 @@
+P(Cat|Features)\propto P(Cat)*P(Size|Cat)*P(Ears|Cat)*P(Temperament|Cat)*P(Tail|Cat)*P(Snout|Cat)
+=.5*.8*.1*.4*.25*.2=.0008
+
+
+P(Dog|Features)\propto P(Dog)*P(Size|Dog)*P(Ears|Dog)*P(Temperament|Dog)*P(Tail|Dog)*P(Snout|Dog)
+=.5*.3*.9*.9*.6*.8=.05832
+
+
+P(Dog|Features) \geq  P(Cat|Features)\Rightarrow
