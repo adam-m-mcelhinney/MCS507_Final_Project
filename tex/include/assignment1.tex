@@ -2,7 +2,8 @@
 % file: assignment2.tex
 
 
-\graphicspath{{C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507HW/MCS 507 Homework 4/MCS507--Project-3/tex/include/}}
+%\graphicspath{{C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507_Final_Project/tex/include}}
+\graphicspath{{C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-3/tex/include/}}
 
 \section{Assignment One: Overview and Illustrative Example} % (fold)
 \label{sec: Main Problem}
@@ -67,13 +68,13 @@ We can thus conclude with nearly 89\% certainty that they were discussing the Ch
 \subsection{Overview of the Methodology} % (fold)
 
 \begin{flushleft}
-Now that we have an understanding of Bayes Theorem, we can further discuss the implementation of it for purposes of a Bayesian Classifier. As previously stated, a Bayesian Classifier builds off Bayes theorem to predict membership to a class. If the classifier uses strict assumptions about the independence of the variables, it is referred to as a Niave Bayes Classifier (How to Build a Naive Bayes Classifier, 2012). 
+Now that we have an understanding of Bayes Theorem, we can further discuss the implementation of it for purposes of a Bayesian Classifier. As previously stated, a Bayesian Classifier builds off Bayes theorem to predict membership to a class. If the classifier uses strict assumptions about the independence of the variables, it is referred to as a Naive Bayes Classifier (How to Build a Naive Bayes Classifier, 2012). 
 \end{flushleft}
 These classifiers are typically implemented using k-fold cross validation. k-fold cross validation is a commonly used machine learning technique where the data is divided into roughly k equal parts (k being specified by the user at the outset). The model is then fit using the observations in k-1 parts. Then the model is then used to score the k-th part. The accuracy of the model is then computed based on its predictive power for this k-th part. This process is repeated k-times, using a different partition each time. The selection of the value k is somewhat arbitrary, but for large data sets, k=10 is generally accepted as a reasonable choice. 
 
 \begin{figure}[H]
     \centering
-       \includegraphics[width=4.5 in]{k-fold_cv.png}
+       \includegraphics[width=4.5 in]{k-fold_cv.PNG}
     \caption{Example of k-fold cross-validation, k=5. (Hastie \& Tibshirani 2009)}
     \label{Example Data}
 \end{figure}
