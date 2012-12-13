@@ -1,10 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.22)  6 DEC 2012 20:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.22)  13 DEC 2012 16:12
 entering extended mode
-**C:/Documents*and*Settings/amcelhinney/My*Documents/GitHub/MCS507_Final_Projec
-t/tex/main.tex
-
-("C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507_Final_Projec
-t/tex/main.tex"
+**C:/Local_Files/GitHub/MCS507_Final_Project/tex/main.tex
+(C:/Local_Files/GitHub/MCS507_Final_Project/tex/main.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -248,11 +245,17 @@ Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 453.
 \endnotesep=\dimen127
 \@enotes=\write3
 )
+("C:\Program Files\MiKTeX\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip53
+\bibsep=\skip54
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count116
+)
 ("C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-("C:\Documents and Settings\amcelhinney\My Documents\GitHub\MCS507_Final_Projec
-t\tex\main.aux"
+(C:\Local_Files\GitHub\MCS507_Final_Project\tex\main.aux
 
 LaTeX Warning: Label `2nd' multiply defined.
 
@@ -281,136 +284,124 @@ LaTeX Warning: Label `2nd' multiply defined.
 LaTeX Warning: Label `table:nonlin' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-\c@lstlisting=\count116
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+\c@lstlisting=\count117
  ("C:\Program Files\MiKTeX\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
+\scratchcounter=\count118
 \scratchdimen=\dimen128
 \scratchbox=\box32
-\nofMPsegments=\count118
-\nofMParguments=\count119
+\nofMPsegments=\count119
+\nofMParguments=\count120
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count120
+\MPscratchCnt=\count121
 \MPscratchDim=\dimen129
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks24
-)
-("C:\Documents and Settings\amcelhinney\My Documents\GitHub\MCS507_Final_Projec
-t\tex\include/title.tex"
+) (C:\Local_Files\GitHub\MCS507_Final_Project\tex\include/title.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--17
 
  []
 
-)
-("C:\Documents and Settings\amcelhinney\My Documents\GitHub\MCS507_Final_Projec
-t\tex\include/assignment1.tex" [1
+) (C:\Local_Files\GitHub\MCS507_Final_Project\tex\include/assignment1.tex
+[1
 
 {C:/Documents and Settings/All Users/Application Data/MiKTeX/2.9/pdftex/config/
 pdftex.map}]
-<C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-3/te
-x/include/k-fold_cv.PNG, id=13, 607.26875pt x 173.64874pt>
-File: C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project
--3/tex/include/k-fold_cv.PNG Graphic file (type png)
+<C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/k-fold_cv.PNG, id=13, 6
+07.26875pt x 173.64874pt>
+File: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/k-fold_cv.PNG Grap
+hic file (type png)
 
-<use C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/k-fold_cv.PNG>
-Package pdftex.def Info: C:/Documents and Settings/amcelhinney/My Documents/Git
-Hub/MCS507--Project-3/tex/include/k-fold_cv.PNG used on input line 77.
+<use C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/k-fold_cv.PNG>
+Package pdftex.def Info: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include
+/k-fold_cv.PNG used on input line 77.
 (pdftex.def)             Requested size: 325.215pt x 92.99786pt.
 )
-("C:\Documents and Settings\amcelhinney\My Documents\GitHub\MCS507_Final_Projec
-t\tex\include/assignment2.tex" [2 <C:/Documents and Settings/amcelhinney/My Doc
-uments/GitHub/MCS507--Project-3/tex/include/k-fold_cv.PNG>]
-<C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-3/te
-x/include/orange_canvas.PNG, id=19, 1199.48125pt x 328.22626pt>
-File: C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project
--3/tex/include/orange_canvas.PNG Graphic file (type png)
+(C:\Local_Files\GitHub\MCS507_Final_Project\tex\include/assignment2.tex
+[2 <C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/k-fold_cv.PNG>]
+<C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_canvas.PNG, id=1
+9, 1199.48125pt x 328.22626pt>
+File: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_canvas.PNG 
+Graphic file (type png)
 
-<use C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/orange_canvas.PNG>
-Package pdftex.def Info: C:/Documents and Settings/amcelhinney/My Documents/Git
-Hub/MCS507--Project-3/tex/include/orange_canvas.PNG used on input line 54.
+<use C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_canvas.PNG>
+Package pdftex.def Info: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include
+/orange_canvas.PNG used on input line 54.
 (pdftex.def)             Requested size: 469.75499pt x 128.54361pt.
 
-<C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-3/te
-x/include/orange_widget_features.png, id=20, 1020.81375pt x 579.16376pt>
-File: C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project
--3/tex/include/orange_widget_features.png Graphic file (type png)
+<C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_widget_features.
+png, id=20, 1020.81375pt x 579.16376pt>
+File: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_widget_feat
+ures.png Graphic file (type png)
 
-<use C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/orange_widget_features.png>
-Package pdftex.def Info: C:/Documents and Settings/amcelhinney/My Documents/Git
-Hub/MCS507--Project-3/tex/include/orange_widget_features.png used on input line
- 61.
+<use C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_widget_featu
+res.png>
+Package pdftex.def Info: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include
+/orange_widget_features.png used on input line 61.
 (pdftex.def)             Requested size: 469.75499pt x 266.5246pt.
- [3 <C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/orange_canvas.PNG>]
-<C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-3/te
-x/include/orange_connection.PNG, id=24, 403.5075pt x 234.8775pt>
-File: C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project
--3/tex/include/orange_connection.PNG Graphic file (type png)
+ [3 <C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_canvas.PNG>]
 
-<use C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/orange_connection.PNG>
-Package pdftex.def Info: C:/Documents and Settings/amcelhinney/My Documents/Git
-Hub/MCS507--Project-3/tex/include/orange_connection.PNG used on input line 67.
+<C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_connection.PNG, 
+id=24, 403.5075pt x 234.8775pt>
+File: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_connection.
+PNG Graphic file (type png)
+
+<use C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_connection.P
+NG>
+Package pdftex.def Info: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include
+/orange_connection.PNG used on input line 67.
 (pdftex.def)             Requested size: 252.94499pt x 147.23889pt.
-)
-("C:\Documents and Settings\amcelhinney\My Documents\GitHub\MCS507_Final_Projec
-t\tex\include/assignment3.tex" [4 <C:/Documents and Settings/amcelhinney/My Doc
-uments/GitHub/MCS507--Project-3/tex/include/orange_widget_features.png> <C:/Doc
-uments and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-3/tex/inclu
-de/orange_connection.PNG>] [5] [6]
-<C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-3/te
-x/include/3_groups.png, id=35, 1081.8819pt x 876.6351pt>
-File: C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project
--3/tex/include/3_groups.png Graphic file (type png)
+) (C:\Local_Files\GitHub\MCS507_Final_Project\tex\include/assignment3.tex
+[4 <C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_widget_featur
+es.png> <C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/orange_connecti
+on.PNG>] [5] [6]
+<C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/3_groups.png, id=35, 10
+81.8819pt x 876.6351pt>
+File: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/3_groups.png Graph
+ic file (type png)
 
-<use C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/3_groups.png>
-Package pdftex.def Info: C:/Documents and Settings/amcelhinney/My Documents/Git
-Hub/MCS507--Project-3/tex/include/3_groups.png used on input line 133.
+<use C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/3_groups.png>
+Package pdftex.def Info: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include
+/3_groups.png used on input line 133.
 (pdftex.def)             Requested size: 469.75499pt x 380.63762pt.
- [7 <C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/3_groups.png>]
-<C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-3/te
-x/include/3_groups_mis.png, id=42, 1081.8819pt x 876.6351pt>
-File: C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project
--3/tex/include/3_groups_mis.png Graphic file (type png)
 
-<use C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/3_groups_mis.png>
-Package pdftex.def Info: C:/Documents and Settings/amcelhinney/My Documents/Git
-Hub/MCS507--Project-3/tex/include/3_groups_mis.png used on input line 202.
+[7 <C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/3_groups.png>]
+<C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/3_groups_mis.png, id=42
+, 1081.8819pt x 876.6351pt>
+File: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/3_groups_mis.png G
+raphic file (type png)
+
+<use C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/3_groups_mis.png>
+Package pdftex.def Info: C:/Local_Files/GitHub/MCS507_Final_Project/tex/include
+/3_groups_mis.png used on input line 202.
 (pdftex.def)             Requested size: 469.75499pt x 380.63762pt.
- [8]
+
+[8]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 213.
 
-
-("C:\Program Files\MiKTeX\tex\latex\base\omscmr.fd"
+ ("C:\Program Files\MiKTeX\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 213.
- [9 <C:/Documents and Settings/amcelhinney/My Documents/GitHub/MCS507--Project-
-3/tex/include/3_groups_mis.png>])
-("C:\Documents and Settings\amcelhinney\My Documents\GitHub\MCS507_Final_Projec
-t\tex\include/conclusion.tex")
-("C:\Documents and Settings\amcelhinney\My Documents\GitHub\MCS507_Final_Projec
-t\tex\include/bibliography.tex" [10]
+ [9 <C:/Local_Files/GitHub/MCS507_Final_Project/tex/include/3_groups_mis.png>])
+
+(C:\Local_Files\GitHub\MCS507_Final_Project\tex\include/conclusion.tex)
+(C:\Local_Files\GitHub\MCS507_Final_Project\tex\include/bibliography.tex
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
@@ -468,21 +459,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-) [11]
-("C:\Documents and Settings\amcelhinney\My Documents\GitHub\MCS507_Final_Projec
-t\tex\main.aux")
+) [11] (C:\Local_Files\GitHub\MCS507_Final_Project\tex\main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4376 strings out of 494049
- 64771 string characters out of 3150022
- 298226 words of memory out of 3000000
- 7590 multiletter control sequences out of 15000+200000
+ 4706 strings out of 494049
+ 67138 string characters out of 3150022
+ 304153 words of memory out of 3000000
+ 7916 multiletter control sequences out of 15000+200000
  10495 words of font info for 38 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 36i,8n,40p,1003b,1520s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,8n,40p,967b,1520s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/ty
@@ -494,7 +483,7 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmti10.pfb>
-Output written on main.pdf (11 pages, 630738 bytes).
+Output written on main.pdf (11 pages, 630724 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
